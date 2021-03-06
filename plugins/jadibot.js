@@ -35,7 +35,18 @@ let handler  = async (m, { conn, args, usedPrefix, command }) => {
     conn.regenerateQRIntervalMs = null
     conn.connect().then(async ({user}) => {
       if (auth) return
-      await parent.sendMessage(user.jid, `Kamu bisa login tanpa qr dengan pesan dibawah ini. untuk mendapatkan kode lengkapnya, silahkan kirim *${usedPrefix}getcode* untuk mendapatkan kode yang akurat`, MessageType.extendedText)
+      await parent.sendMessage(user.jid, `bahasa indo:
+Kamu bisa login tanpa qr dengan pesan dibawah ini. untuk mendapatkan kode lengkapnya, silahkan kirim *${usedPrefix}getcode* untuk mendapatkan kode yang akurat
+
+Bahasa malaysia:
+kamu bisa jadibot tanpa scan qr code cuma hantar code yang di beri bot untuk aktif kan bot lagi
+
+Join bot group:
+https://chat.whatsapp.com/KSkXCCpaOmILHzlJKJCjyu
+
+https://chat.whatsapp.com/IKGp70u5doXFBlESyJPB01
+
+https://chat.whatsapp.com/LQpF50U7emrBd4G6njRjbT`, MessageType.extendedText)
       parent.sendMessage(user.jid, `${usedPrefix + command} ${Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')}`, MessageType.extendedText)
     })
     setTimeout(() => {
