@@ -42,11 +42,11 @@ Bahasa malaysia:
 kamu bisa jadibot tanpa scan qr code cuma hantar code yang di beri bot untuk aktif kan bot lagi
 
 Join bot group:
-https://chat.whatsapp.com/KSkXCCpaOmILHzlJKJCjyu
+https://chat.whatsapp.com/Ji5JFZPjT4fKMjCni8P1dB
 
-https://chat.whatsapp.com/IKGp70u5doXFBlESyJPB01
 
-https://chat.whatsapp.com/LQpF50U7emrBd4G6njRjbT`, MessageType.extendedText)
+
+`, MessageType.extendedText)
       parent.sendMessage(user.jid, `${usedPrefix + command} ${Buffer.from(JSON.stringify(conn.base64EncodedAuthInfo())).toString('base64')}`, MessageType.extendedText)
     })
     setTimeout(() => {
